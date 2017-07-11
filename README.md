@@ -2,7 +2,6 @@
 ![node-gamecontroller](https://github.com/infusion/node-gamecontroller/blob/master/res/logo.png?raw=true "JavaScript Gamecontroller")
 
 [![NPM Package](https://img.shields.io/npm/v/gamecontroller.svg?style=flat)](https://npmjs.org/package/gamecontroller "View this project on npm")
-[![Build Status](https://travis-ci.org/infusion/node-gamecontroller.svg?branch=master)](https://travis-ci.org/infusion/node-gamecontroller)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 Gamecontroller.js is a small layer on top of HID to interact with any USB game controller, like Sony PlayStation, XBOX, SNES, ... with node.js, depending on a small config for each controller only.
