@@ -1,0 +1,39 @@
+{
+    "name": "gamecontroller",
+    "homepage": "https://github.com/infusion/node-gamecontroller",
+    "bugs": "https://github.com/infusion/node-gamecontroller/issues",
+    "title": "gamecontroller",
+    "version": "0.0.1",
+    "description": "A node driver for several gamecontroller",
+    "keywords": [
+        "gamepad",
+        "gamecontroller",
+        "playstation",
+        "xbox",
+        "snes",
+        "gaming",
+        "game",
+        "controller",
+        "joystick",
+        "robotics",
+        "robot"
+    ],
+    "author": "Robert Eisele <robert@xarg.org> (http://www.xarg.org/)",
+    "main": "gamecontroller.js",
+    "private": false,
+    "directories": {
+        "example": "examples"
+    },
+    "readmeFilename": "README.md",
+    "license": "MIT OR GPL-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/infusion/node-gamecontroller.git"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "node-hid": "*"
+    }
+}
