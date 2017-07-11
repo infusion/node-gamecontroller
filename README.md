@@ -25,12 +25,12 @@ Plug in your game controller and run the following code:
 
 ```js
 const Gamecontroller = require('gamecontroller');
-var ctrl = new Gamecontroller('ps2');
+const ctrl = new Gamecontroller('ps2');
 
 ctrl.connect();
 
 ctrl.on('connected', function() {
-    console.log("Game On!);
+    console.log('Game On!');
 });
 
 ctrl.on('X:press', function() {
@@ -42,7 +42,7 @@ ctrl.on('X:release', function() {
 });
 ```
 
-To get the full parsed HID data stream (for example to get joystick data), you can run
+To get the full parsed HID data stream, you can run
 
 ```js
 ctrl.on('data', function(data) {
