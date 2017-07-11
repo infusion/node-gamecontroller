@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/infusion/node-gamecontroller.svg?branch=master)](https://travis-ci.org/infusion/node-gamecontroller)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-Gamecontroller.js is a small layer on top of HID to interact with USB game controllers, like Sony PlayStation, XBOX, SNES, ... with node.js.
+Gamecontroller.js is a small layer on top of HID to interact with any USB game controller, like Sony PlayStation, XBOX, SNES, ... with node.js, depending on a small config for each controller only.
 
 
 
@@ -53,6 +53,11 @@ ctrl.on('data', function(data) {
 Supported Events
 ===
 
+Data
+---
+
+- `data`- Get parsed data as it comes in
+
 Buttons
 ---
 
@@ -90,9 +95,24 @@ var dev = Gamecontroller.getDevices();
 console.log(dev);
 ```
 
-If your controller isn't supported yet, file a bug ticket.
+Add a new controllers
+===
 
+If your controller isn't supported yet, add the the config to the `lib/vendor.js` file and send a pull request or file a bug ticket. To get all the information follow the following simple steps. Run the following snippet, locate your controller and note the vendorId and productId.:
 
+```js
+var HID = require('node-hid');
+console.log(HID.devices());
+```
+
+Using the vendorId and productId you can run the following snippet, press all the keys on your controller and get the array position of what key changes what array index.
+
+```js
+var hid = new HID.HID(vendorId, productId);
+hid.on("data", function(data) {
+    console.log(data);
+});
+```
 
 Copyright and licensing
 ===
