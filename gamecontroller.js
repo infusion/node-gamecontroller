@@ -1,5 +1,5 @@
 /**
- * @license GameController v0.0.1 09/07/2017
+ * @license GameController v0.0.2 09/07/2017
  *
  * Copyright (c) 2017, Robert Eisele (robert@xarg.org)
  * Dual licensed under the MIT or GPL Version 2 licenses.
@@ -27,13 +27,13 @@ function GameController(type) {
   this._vendor = Vendors[type];
 
   EventEmitter.call(this);
-  process.on('exit', this.disconnect.bind(this));
+  process.on('exit', this.close.bind(this));
 }
 
 GameController.prototype = {
   _hid: null,
   _vendor: null,
-  connect: function() {
+  connect: function(cb) {
     let ven = this._vendor;
 
     try {
@@ -83,17 +83,19 @@ GameController.prototype = {
       }
     });
 
-    this.emit('connected');
+    if (cb instanceof Function) {
+      cb();
+    }
 
     return this;
   },
-  disconnect: function() {
+  close: function() {
     if (this._hid) {
       this._hid.disconnect();
       this._hid = null;
     }
 
-    this.emit('disconnected');
+    this.emit('close');
 
     return this;
   }

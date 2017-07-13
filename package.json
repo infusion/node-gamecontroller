@@ -3,7 +3,7 @@
     "homepage": "https://github.com/infusion/node-gamecontroller",
     "bugs": "https://github.com/infusion/node-gamecontroller/issues",
     "title": "gamecontroller",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A node driver for several gamecontroller",
     "keywords": [
         "gamepad",

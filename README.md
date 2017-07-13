@@ -26,9 +26,7 @@ Plug in your game controller and run the following code:
 const Gamecontroller = require('gamecontroller');
 const ctrl = new Gamecontroller('ps2');
 
-ctrl.connect();
-
-ctrl.on('connected', function() {
+ctrl.connect(function() {
     console.log('Game On!');
 });
 
@@ -72,6 +70,12 @@ Status
 ---
 
 - `{type}:change` - The status of a measure like battery changed
+
+Misc
+---
+
+- `error` - An error has occurred
+- `close` - The connection was closed successfully
 
 
 Supported Controllers
