@@ -91,7 +91,7 @@ GameController.prototype = {
   },
   close: function() {
     if (this._hid) {
-      this._hid.disconnect();
+      this._hid.close();
       this._hid = null;
     }
 
