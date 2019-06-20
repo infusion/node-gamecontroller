@@ -61,13 +61,22 @@ GameController.prototype = {
         let sp = s.split(":");
 
         if (sp[0] === 'axis') {
+          if(sp[2] === 'X') {
+            let Ykey = sp[0] + ':' + sp[1] + ':Y';
 
-          let Ykey = sp[0] + ':' + sp[1] + ':Y';
+            if (ns !== os || newState[Ykey] !== oldState[Ykey]) {
+              pass.x = ns;
+              pass.y = newState[Ykey];
+              self.emit(sp[1] + ':move', pass);
+            }
+          } else if(sp[2] === 'Y') {
+            let Xkey = sp[0] + ':' + sp[1] + ':X';
 
-          if (sp[2] === 'X' && (ns !== os || newState[Ykey] !== oldState[Ykey])) {
-            pass.x = ns;
-            pass.y = newState[Ykey];
-            self.emit(sp[1] + ':move', pass);
+            if (ns !== os || newState[Xkey] !== oldState[Xkey]) {
+              pass.x = newState[Xkey];
+              pass.y = ns;
+              self.emit(sp[1] + ':move', pass);
+            }
           }
         } else if (os !== ns) {
 
