@@ -98,7 +98,7 @@ var dev = Gamecontroller.getDevices();
 console.log(dev);
 ```
 
-Add a new controllers
+Adding new controllers
 ===
 
 If your controller isn't supported yet, add the the config to the `lib/vendor.js` file and send a pull request or file a bug ticket. To get all the information follow the following simple steps. Run the following snippet, locate your controller and note the vendorId and productId.:
