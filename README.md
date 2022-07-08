@@ -101,14 +101,14 @@ console.log(dev);
 Adding new controllers
 ===
 
-If your controller isn't supported yet, add the the config to the `lib/vendor.js` file and send a pull request or file a bug ticket. To get all the information follow the following simple steps. Run the following snippet, locate your controller and note the vendorId and productId.:
+If your controller isn't supported yet, add the config to the `lib/vendor.js` file and send a pull request or file a bug ticket. To get all the information follow the following simple steps. Run the following snippet, locate your controller and note the vendorId and productId:
 
 ```js
 var HID = require('node-hid');
 console.log(HID.devices());
 ```
 
-Using the vendorId and productId you can run the following snippet, press all the keys on your controller and get the array position of what key changes what array index.
+Using the vendorId and productId you can run the following snippet, press all the keys on your controller and get the array position of what key changes what array index:
 
 ```js
 var hid = new HID.HID(vendorId, productId);
