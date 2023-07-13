@@ -1,10 +1,9 @@
+var GameController = require("../gamecontroller.js");
 
-var GameController = require('../gamecontroller.js');
-
-var gc = new GameController('ps2');
+var gc = new GameController("gamesir-g4s");
 
 gc.connect();
 
-gc.on('JOYL:move', function(o) {
+gc.on("JOYR:move", function (o) {
   console.log(o);
 });
