@@ -119,5 +119,5 @@ hid.on("data", function(data) {
 
 Copyright and licensing
 ===
-Copyright (c) 2017, [Robert Eisele](https://www.xarg.org/)
+Copyright (c) 2017, [Robert Eisele](https://raw.org/)
 Dual licensed under the MIT or GPL Version 2 licenses.
