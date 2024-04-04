@@ -18,7 +18,7 @@
         "robotics",
         "robot"
     ],
-    "author": "Robert Eisele <robert@xarg.org> (http://www.xarg.org/)",
+    "author": "Robert Eisele <robert@raw.org> (https://raw.org/)",
     "main": "gamecontroller.js",
     "private": false,
     "directories": {
